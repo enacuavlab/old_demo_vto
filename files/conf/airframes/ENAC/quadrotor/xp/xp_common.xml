@@ -15,7 +15,8 @@
 
   <section name="BAT">
     <define name="FAILSAFE_ON_BAT_CRITICAL" value="TRUE"/>
-    <define name="CRITIC_BAT_LEVEL" value="10.80" unit="V"/>
+    <define name="CRITIC_BAT_LEVEL" value="11.50" unit="V"/>
+    <!--define name="CRITIC_BAT_LEVEL" value="10.80" unit="V"/-->
   </section>
 
   <section name="AUTOPILOT">
@@ -23,6 +24,8 @@
     <define name="MODE_MANUAL" value="AP_MODE_ATTITUDE_DIRECT"/>
     <define name="MODE_AUTO1" value="AP_MODE_ATTITUDE_Z_HOLD"/>
     <define name="MODE_AUTO2" value="AP_MODE_NAV"/>
+    
+    <define name="FAILSAFE_DESCENT_SPEED" value="0.5"/>
   </section>
 
   <section name="GCS">
