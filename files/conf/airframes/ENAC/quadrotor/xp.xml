@@ -30,23 +30,15 @@
       - ICM-20600 (acc+gyro) + BMP388 (baro) + LIS3MDL (I2C2 on external GPS board)
 
     FAILSAFE :
-      - GPS lost: pith=0,roll=0,FAILSAFE_DESCENT_SPEED
+      - GPS lost, Critical Battery level: pith=0,roll=0,FAILSAFE_DESCENT_SPEED
       - All Datalink/Telemetry lost: ?
       - RC lost: detect from sbus not sending signal, no recovery actions
-      - Critical Battery level: should be handle in flight plans below
-
-        header
-          #include "subsystems/electrical.h"
-        /header
-        modules ...
-        exceptions
-          exception cond="(electrical.bat_critical)" deroute="land here"/
-        /exceptions
 
     </description>
   <firmware name="rotorcraft">
 
     <configure name="PERIODIC_FREQUENCY" value="1000"/>
+    <define name="FAILSAFE_ON_BAT_CRITICAL" value="TRUE"/>
 
     <target name="nps" board="pc">
       <module name="fdm"            type="jsbsim"/>

@@ -14,9 +14,7 @@
   </section>
 
   <section name="BAT">
-    <define name="FAILSAFE_ON_BAT_CRITICAL" value="TRUE"/>
-    <define name="CRITIC_BAT_LEVEL" value="11.50" unit="V"/>
-    <!--define name="CRITIC_BAT_LEVEL" value="10.80" unit="V"/-->
+    <define name="CRITIC_BAT_LEVEL" value="10.8" unit="V"/>
   </section>
 
   <section name="AUTOPILOT">
