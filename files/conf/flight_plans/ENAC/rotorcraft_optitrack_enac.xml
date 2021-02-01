@@ -2,17 +2,7 @@
 
 <flight_plan alt="148" ground_alt="146" lat0="43.5640917" lon0="1.4829201" max_dist_from_home="20" name="Rotorcraft Optitrack (ENAC)" security_height="0.3">
   <header>
-    #include "subsystems/electrical.h"
-    #include "subsystems/radio_control.h"
 #include "autopilot.h"
-inline void setNav(void){
-  autopilot_mode_auto2 = AP_MODE_NAV;
-  autopilot_static_set_mode(AP_MODE_NAV);
-}
-inline void setGuided(void){
-  autopilot_mode_auto2 = AP_MODE_GUIDED;
-  autopilot_static_set_mode(AP_MODE_GUIDED);
-}
   </header>
   <waypoints>
     <waypoint name="HOME" x="0.0" y="0.0"/>
@@ -37,7 +27,7 @@ inline void setGuided(void){
       <corner name="_N3"/>
       <corner name="_N4"/>
     </sector>
-    <sector color="green" name="Survey" type="dynamic">
+    <sector color="green" name="Safety" type="dynamic">
       <corner name="S1"/>
       <corner name="S2"/>
       <corner name="S3"/>
@@ -63,7 +53,6 @@ inline void setGuided(void){
       <call_once fun="NavResurrect()"/>
       <attitude pitch="0" roll="0" throttle="0" until="FALSE" vmode="throttle"/>
     </block>
-
     <block name="Takeoff" strip_button="Takeoff" strip_icon="takeoff.png">
       <exception cond="stateGetPositionEnu_f() @DEREF z @GT 1.5" deroute="Standby"/>
       <call_once fun="NavResurrect()"/>
@@ -75,46 +64,16 @@ inline void setGuided(void){
       <call_once fun="autopilot_set_mode(AP_MODE_NAV)"/>
       <stay wp="STDBY"/>
     </block>
-
-    <!--block name="Takeoff" strip_button="Takeoff" strip_icon="takeoff.png">
-      <exception cond="stateGetPositionEnu_f()->z > 1.0" deroute="Standby"/>
-      <call_once fun="NavSetWaypointHere(WP_CLIMB)"/>
-      <attitude pitch="0" roll="0" throttle="0.5" until="stage_time>1" vmode="throttle"/>
-      <stay climb="nav_climb_vspeed" vmode="climb" wp="CLIMB"/>
-    </block>
-    <block name="Standby" strip_button="Standby" strip_icon="home.png">
-      <call_once fun="NavSetWaypointHere(WP_STDBY)"/>
-      <call_once fun="nav_set_heading_deg(0)"/>
-      <stay wp="STDBY"/>
-    </block-->
-
-    <block name="STOP">
-      <call_once fun="NavSetWaypointHere(WP_STDBY)"/>
-      <call_once fun="setNav()"/>
-      <stay wp="STDBY"/>
+    <block name="Guided_run" strip_button="Guided run">
+      <!--exception cond="!InsideSafety(GetPosX(),GetPosY())" deroute="Standby"/-->
+      <call_once fun="autopilot_set_mode(AP_MODE_GUIDED)"/>
     </block>
     <block name="Land here" strip_button="Land Here" strip_icon="land-right.png">
-      <call_once fun="setNav()"/>
       <call_once fun="NavSetWaypointHere(WP_TD)"/>
-      <go wp="TD"/>
-      <deroute block="Flare"/>
     </block>
    <block name="Land">
-      <call_once fun="setNav()"/>
       <go wp="TD"/>
-      <deroute block="Flare"/>
     </block>
-    <!--block name="Flare">
-      <exception cond="NavDetectGround()" deroute="Holding point"/>
-      <exception cond="!nav_is_in_flight()" deroute="Landed"/>
-      <exception cond="0.10 > stateGetPositionEnu_f()->z" deroute="Landed"/>
-      <call_once fun="NavStartDetectGround()"/>
-      <stay climb="nav_descend_vspeed" vmode="climb" wp="TD"/>
-    </block>
-    <block name="Landed">
-      <call_once fun="NavKillThrottle()"/>
-      <attitude pitch="0" roll="0" throttle="0" until="FALSE" vmode="throttle"/>
-    </block-->
     <block name="Flare">
       <exception cond="stateGetPositionEnu_f()->z @LT 0.5" deroute="Ramp down"/>
       <exception cond="!nav_is_in_flight()" deroute="Landed"/>

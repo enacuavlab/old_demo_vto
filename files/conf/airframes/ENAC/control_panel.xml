@@ -270,6 +270,13 @@
         <arg flag="!" constant="xvimagesink"/>
         <arg flag="sync=false"/>
       </program>
+      <program name="gst-launch-1.0">
+        <arg flag="rtspsrc" constant="location=rtsp://192.168.1.112:8554/test2"/>
+        <arg flag="!" constant="rtph264depay"/>
+        <arg flag="!" constant="avdec_h264"/>
+        <arg flag="!" constant="xvimagesink"/>
+        <arg flag="sync=false"/>
+      </program>
       <program name="groundpi">
         <arg flag="root@groundpi_112" constant="/home/pi/groundpi.sh 192.168.1.236 > /dev/null 2>&1 &"/>
       </program>

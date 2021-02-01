@@ -270,15 +270,15 @@
         <arg flag="!" constant="xvimagesink"/>
         <arg flag="sync=false"/>
       </program>
+      <program name="gst-launch-1.0">
+        <arg flag="rtspsrc" constant="location=rtsp://192.168.1.112:8554/test2"/>
+        <arg flag="!" constant="rtph264depay"/>
+        <arg flag="!" constant="avdec_h264"/>
+        <arg flag="!" constant="xvimagesink"/>
+        <arg flag="sync=false"/>
+      </program>
       <program name="groundpi">
         <arg flag="root@groundpi_112" constant="/home/pi/groundpi.sh 192.168.1.236 > /dev/null 2>&1 &"/>
-      </program>
-      <program name="Real-time Plotter">
-        <arg flag="-g" constant="1500x500"/>
-        <arg flag="-u" constant="0.05"/>
-        <arg flag="-c" constant="*:telemetry:VERT_LOOP:ref_z"/>
-        <arg flag="-c" constant="*:telemetry:VERT_LOOP:z_sp"/>
-        <arg flag="-c" constant="*:telemetry:VERT_LOOP:est_z"/>
       </program>
     </session>
     <session name="Flight Explorer_115">
