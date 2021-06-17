@@ -179,7 +179,7 @@
         <arg flag="T1600M_ground.xml"/>
       </program>
       <program name="FC Rotorcraft">
-        <arg flag="-gr" constant="ENAC/explorer.json"/>
+        <arg flag="-gr" constant="ENAC/explorer_115_116.json"/>
       </program>
       <program name="groundpi">
         <arg flag="root@groundpi_111" constant="/home/pi/groundpi.sh 192.168.1.236 > /dev/null 2>&1 &"/>
