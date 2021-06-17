@@ -27,7 +27,7 @@
       <corner name="_N3"/>
       <corner name="_N4"/>
     </sector>
-    <sector color="green" name="Safety" type="dynamic">
+    <sector color="green" name="Safety" >
       <corner name="S1"/>
       <corner name="S2"/>
       <corner name="S3"/>

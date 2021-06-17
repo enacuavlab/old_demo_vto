@@ -25,7 +25,7 @@
       <corner name="_N3"/>
       <corner name="_N4"/>
     </sector>
-    <sector color="green" name="Survey" type="dynamic">
+    <sector color="green" name="Survey" >
       <corner name="S1"/>
       <corner name="S2"/>
       <corner name="S3"/>
