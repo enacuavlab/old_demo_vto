@@ -223,7 +223,7 @@
     <define name="G1_ROLL"  value="{-35 , -35, 35 , 35 }"/>
     <define name="G1_PITCH" value="{30 , -30, -30 , 30 }"/>
     <define name="G1_YAW"   value="{-5, 5, -5, 5}"/>
-    <define name="G1_THRUST" value="{-.8, -.8, -.8, -.8}"/>
+    <define name="G1_THRUST" value="{-1.5, -1.5, -1.5, -1.5}"/>
     <!--Counter torque effect of spinning up a rotor-->
     <define name="G2" value="{-150.0,   150.0,  -150.0,   150.0 }"/>
     <!-- first order actuator dynamics -->
