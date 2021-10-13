@@ -1,4 +1,4 @@
-                                                   <!DOCTYPE airframe SYSTEM "../../airframe.dtd">
+<!DOCTYPE airframe SYSTEM "../../airframe.dtd">
 
 <airframe name="Quadricopter XP Tawaki">
 
@@ -11,6 +11,7 @@
   </description>
 
   <firmware name="rotorcraft">
+    <!--configure name="RTOS_DEBUG" value="1"/-->
     <configure name="PERIODIC_FREQUENCY" value="1000"/>
     <configure name="AHRS_PROPAGATE_FREQUENCY" value="$(PERIODIC_FREQUENCY)"/>
     <define name="LOW_NOISE_THRESHOLD" value="10000"/>
@@ -25,6 +26,7 @@
       <module name="radio_control" type="ppm"/>
     </target>
 
+
     <module name="telemetry" type="xbee_api"/>
 
     <!--Tawaki -->
@@ -33,14 +35,22 @@
       <configure name="EXTRA_DL_BAUD" value="B115200"/>
     </module>
 
+
     <module name="actuators" type="dshot">
-      <!--define name="DSHOT_SPEED" value="300"/-->
+      <define name="DSHOT_SPEED" value="300"/>
     </module>
 
     <module name="board" type="tawaki">
       <define name="IMU_MPU_LOWPASS_FILTER" value="MPU60X0_DLPF_256HZ"/>
       <define name="IMU_MPU_ACCEL_LOWPASS_FILTER" value="MPU60X0_DLPF_ACC_218HZ"/>
       <define name="IMU_MPU_SMPLRT_DIV" value="0"/>
+    </module>
+
+    <!--Info: Tawaki(Auxa1):STM32_PWM_USE_TIM5, Apogee: PPMin -->
+    <module name="light_scheduler">
+      <define name="STM32_PWM_USE_TIM5"/>
+      <define name="WS2812_NB_LEDS" value="12"/>
+      <define name="WS2812_SEQUENCE" value="2"/>
     </module>
 
     <module name="gps" type="datalink"/>
@@ -53,10 +63,14 @@
     </module>
     <module name="fc_rotor"/>
 
-    <module name="ins" type="gps_passthrough"/>
+    <!--module name="ins" type="gps_passthrough"/>
     <module name="ahrs" type="int_cmpl_quat">
       <configure name="USE_MAGNETOMETER" value="FALSE"/>
-    </module>
+    </module-->
+    <module name="ins" type="float_invariant"/>
+    <configure name="USE_MAGNETOMETER" value="FALSE"/>
+    <define name="INS_INV_USE_GPS_HEADING" value="TRUE"/>
+    <define name="INS_INV_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/>
 
     <module name="air_data"/>
 
@@ -67,11 +81,11 @@
 
     <module name="motor_mixing"/>
 
-    <!--module name="tlsf"/>
+    <module name="tlsf"/>
     <module name="pprzlog"/>
     <module name="logger" type="sd_chibios"/>
     <module name="flight_recorder"/>
-    <module name="logger" type="tune_indi"/-->
+    <!--module name="logger" type="tune_indi"/-->
   </firmware>
 
   <servos driver="DShot">
@@ -117,20 +131,12 @@
     <define name="ACCEL_Y_SIGN" value="-1"/>
     <define name="ACCEL_Z_SIGN" value="1"/>
 
-    <define name="ACCEL_X_NEUTRAL" value="11"/>
-    <define name="ACCEL_Y_NEUTRAL" value="29"/>
-    <define name="ACCEL_Z_NEUTRAL" value="62"/>
-    <define name="ACCEL_X_SENS" value="2.54866322392" integer="16"/>
-    <define name="ACCEL_Y_SENS" value="2.4514602692" integer="16"/>
-    <define name="ACCEL_Z_SENS" value="2.44948485813" integer="16"/>
-
-    <!--define name="ACCEL_X_NEUTRAL" value="-46"/>
-    <define name="ACCEL_Y_NEUTRAL" value="44"/>
-    <define name="ACCEL_Z_NEUTRAL" value="40"/>
-    <define name="ACCEL_X_SENS" value="2.49163573408" integer="16"/>
-    <define name="ACCEL_Y_SENS" value="2.45094260883" integer="16"/>
-    <define name="ACCEL_Z_SENS" value="2.45017558208" integer="16"/-->
-
+    <define name="ACCEL_X_NEUTRAL" value="-44"/>
+    <define name="ACCEL_Y_NEUTRAL" value="54"/>
+    <define name="ACCEL_Z_NEUTRAL" value="77"/>
+    <define name="ACCEL_X_SENS" value="2.58809979303" integer="16"/>
+    <define name="ACCEL_Y_SENS" value="2.45304411383" integer="16"/>
+    <define name="ACCEL_Z_SENS" value="2.44818719426" integer="16"/>
 
     <define name="MAG_X_SIGN" value="-1"/>
     <define name="MAG_Y_SIGN" value="-1"/>
@@ -225,7 +231,7 @@
     <define name="G1_ROLL"  value="{-35 , -35, 35 , 35 }"/>
     <define name="G1_PITCH" value="{30 , -30, -30 , 30 }"/>
     <define name="G1_YAW"   value="{-5, 5, -5, 5}"/>
-    <define name="G1_THRUST" value="{-1.8, -1.8, -1.8, -1.8}"/>
+    <define name="G1_THRUST" value="{-1.5, -1.5, -1.5, -1.5}"/>
     <!--Counter torque effect of spinning up a rotor-->
     <define name="G2" value="{-150.0,   150.0,  -150.0,   150.0 }"/>
     <!-- first order actuator dynamics -->

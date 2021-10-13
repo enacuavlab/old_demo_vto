@@ -223,12 +223,12 @@
     <!-- reference acceleration for attitude control -->
     <define name="REF_ERR_P" value="111"/>
     <define name="REF_ERR_Q" value="111"/>
-    <define name="REF_ERR_R" value="120"/>
+    <define name="REF_ERR_R" value="60"/>
     <define name="REF_RATE_P" value="15.4"/>
     <define name="REF_RATE_Q" value="14.0"/>
     <define name="REF_RATE_R" value="8.0"/>
 
-    <define name="MAX_R" value="120" unit="deg/s"/>
+    <define name="MAX_R" value="40" unit="deg/s"/>
 
     <!-- second order filter parameters -->
     <define name="FILT_CUTOFF" value="4.0"/>

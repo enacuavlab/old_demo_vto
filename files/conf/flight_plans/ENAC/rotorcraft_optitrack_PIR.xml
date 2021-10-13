@@ -97,8 +97,7 @@ static inline void joystick_handler(uint8_t sender_id __attribute__((unused)), i
     <block group="extra_pattern" name="Survey RECTANGLE RUN">
       <exception cond="rectangle_survey_sweep_num == 1" deroute="Standby"/>
       <call fun="nav_survey_rectangle_rotorcraft_run(WP_S1, WP_S3)"/>
-   </block>
-    <block name="land here" strip_button="Land Here" strip_icon="land-right.png">
+/bin/bash: n: command not found
       <call_once fun="NavSetWaypointHere(WP_TD)"/>
     </block>
     <block name="land">

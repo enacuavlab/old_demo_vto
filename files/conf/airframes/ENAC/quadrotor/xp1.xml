@@ -54,9 +54,9 @@
     <target name="ap" board="tawaki_1.0">
       <configure name="AHRS_PROPAGATE_FREQUENCY" value="$(PERIODIC_FREQUENCY)"/>
 
-      <!--module name="radio_control" type="datalink"/-->
-      <module name="radio_control" type="sbus"/>
-      <define name="RADIO_KILL_SWITCH" value="RADIO_GAIN1"/>
+      <module name="radio_control" type="datalink"/>
+      <!--module name="radio_control" type="sbus"/>
+      <define name="RADIO_KILL_SWITCH" value="RADIO_GAIN1"/-->
 
       <!-- OUTDOOR -->
       <!--module name="gps"                 type="ublox">
@@ -169,9 +169,7 @@
     <module name="logger" type="sd_chibios"/>
     <module name="flight_recorder"/>
 
-    <module name="fc_rotor">
-      <define name="FCROTOR_STARTED" value="FALSE"/>
-    </module>
+    <module name="fc_rotor"/>
 
   </firmware>
 

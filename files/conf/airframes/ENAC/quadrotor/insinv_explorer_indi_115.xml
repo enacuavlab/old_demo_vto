@@ -53,10 +53,14 @@
     </module>
     <module name="fc_rotor"/>
 
-    <module name="ins" type="gps_passthrough"/>
+    <!--module name="ins" type="gps_passthrough"/>
     <module name="ahrs" type="int_cmpl_quat">
       <configure name="USE_MAGNETOMETER" value="FALSE"/>
-    </module>
+    </module-->
+    <module name="ins" type="float_invariant"/>
+    <configure name="USE_MAGNETOMETER" value="FALSE"/>
+    <define name="INS_INV_USE_GPS_HEADING" value="TRUE"/>
+    <define name="INS_INV_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/>
 
     <module name="air_data"/>
 

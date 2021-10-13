@@ -40,7 +40,7 @@
    telemetry="telemetry/default_rotorcraft.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_survey_enac.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi_simple.xml"
+   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/fc_rotor.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi_simple.xml"
    gui_color="#5ae778c7f4fa"
   />
   <aircraft
@@ -49,31 +49,31 @@
    airframe="airframes/ENAC/quadrotor/xp.xml"
    radio="radios/FrSky_X-Lite.xml"
    telemetry="telemetry/ENAC/explorer_2telem_vto.xml"
-   flight_plan="flight_plans/ENAC/rotorcraft_optitrack_enac.xml"
+   flight_plan="flight_plans/ENAC/rotorcraft_optitrack_Murat.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/e_identification_fr.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_extended.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml modules/switch_servo.xml"
+   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/e_identification_fr.xml modules/fc_rotor.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_extended.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml modules/switch_servo.xml"
    gui_color="#08f5e538189a"
   />
   <aircraft
    name="Explorer_115"
    ac_id="115"
-   airframe="airframes/ENAC/quadrotor/explorer_indi_115.xml"
+   airframe="airframes/ENAC/quadrotor/insinv_explorer_indi_115.xml"
    radio="radios/cockpitSX.xml"
-   telemetry="telemetry/default_rotorcraft.xml"
+   telemetry="telemetry/ENAC/explorer_2telem_vto.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_Murat.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
+   settings_modules="modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_float_invariant.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
    gui_color="#ace2152e152e"
   />
   <aircraft
    name="Explorer_116"
    ac_id="116"
-   airframe="airframes/ENAC/quadrotor/explorer_indi_116.xml"
+   airframe="airframes/ENAC/quadrotor/insinv_explorer_indi_116.xml"
    radio="radios/cockpitSX.xml"
-   telemetry="telemetry/default_rotorcraft.xml"
+   telemetry="telemetry/ENAC/explorer_2telem_vto.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_Murat.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
+   settings_modules="modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_float_invariant.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
    gui_color="#254b92d835b6"
   />
   <aircraft
@@ -86,17 +86,6 @@
    settings="settings/rotorcraft_basic.xml"
    settings_modules="modules/ahrs_int_cmpl_quat.xml modules/gps.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/jevois.xml modules/nav_basic_rotorcraft.xml modules/object_tracking.xml modules/stabilization_int_quat.xml"
    gui_color="yellow"
-  />
-  <aircraft
-   name="Hoops_112"
-   ac_id="112"
-   airframe="airframes/ENAC/quadrotor/hoops_112_PIR.xml"
-   radio="radios/spektrum.xml"
-   telemetry="telemetry/default_rotorcraft.xml"
-   flight_plan="flight_plans/ENAC/rotorcraft_optitrack_PIR.xml"
-   settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/dw1000_arduino.xml modules/gps.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/jevois.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_int_quat.xml"
-   gui_color="#ffffffffffff"
   />
   <aircraft
    name="Karpet_113"
@@ -112,12 +101,12 @@
   <aircraft
    name="Mexplorer_117"
    ac_id="117"
-   airframe="airframes/ENAC/quadrotor/explorer_1_murat_voliere.xml"
+   airframe="airframes/ENAC/quadrotor/insinv_explorer_1_murat_voliere.xml"
    radio="radios/T10CG_SBUS.xml"
-   telemetry="telemetry/rotorcraft_with_logger.xml"
+   telemetry="telemetry/default_rotorcraft.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_Murat.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
+   settings_modules="modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_float_invariant.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
    gui_color="blue"
   />
   <aircraft

@@ -54,9 +54,9 @@
     <target name="ap" board="tawaki_1.0">
       <configure name="AHRS_PROPAGATE_FREQUENCY" value="$(PERIODIC_FREQUENCY)"/>
 
-      <!--module name="radio_control" type="datalink"/-->
-      <module name="radio_control" type="sbus"/>
-      <define name="RADIO_KILL_SWITCH" value="RADIO_GAIN1"/>
+      <module name="radio_control" type="datalink"/>
+      <!--module name="radio_control" type="sbus"/>
+      <define name="RADIO_KILL_SWITCH" value="RADIO_GAIN1"/-->
 
       <!-- OUTDOOR -->
       <!--module name="gps"                 type="ublox">
@@ -73,11 +73,15 @@
 
       <!-- INDOOR -->
       <module name="gps"                    type="datalink"/>
-      <module name="ins"                    type="gps_passthrough"/>
+      <!--module name="ins"                 type="gps_passthrough"/>
       <module name="ahrs"                   type="int_cmpl_quat"/>
       <define name="AHRS_USE_GPS_HEADING"   value="TRUE"/>
-      <define name="AHRS_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/>
+      <define name="AHRS_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/-->
       <configure name="USE_MAGNETOMETER"    value="FALSE"/>    
+
+      <module name="ins" type="float_invariant"/>
+      <define name="INS_INV_USE_GPS_HEADING" value="TRUE"/>
+      <define name="INS_INV_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/>
 
     </target>
 
@@ -169,9 +173,7 @@
     <module name="logger" type="sd_chibios"/>
     <module name="flight_recorder"/>
 
-    <module name="fc_rotor">
-      <define name="FCROTOR_STARTED" value="FALSE"/>
-    </module>
+    <module name="fc_rotor"/>
 
   </firmware>
 

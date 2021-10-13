@@ -7,6 +7,7 @@
     <program name="ffplay" command="/usr/bin/ffplay"/>
     <program name="gst-launch-1.0" command="/usr/bin/gst-launch-1.0"/>
     <program name="groundpi" command="/usr/bin/ssh"/>
+    <program name="proxy" command="/home/pprz/Projects/compagnon-software/scripts/proxy.py"/>
   </section>
   <section name="sessions">
     <session name="Swarm Bebop2 212 213">
@@ -123,6 +124,9 @@
         <arg flag="-s" constant="192.168.1.230"/>
         <arg flag="-f" constant="10"/>
         <arg flag="-gr"/>
+      </program>
+      <program name="proxy">
+        <arg flag="--mux 4244:4245 4246:4247" constant="/home/pprz/Projects/compagnon-software/scripts/proxy.py --mux 4244:4245 4246:4247 > null 2>&1 &"/>
       </program>
       <program name="groundpi">
         <arg flag="root@groundpi_111" constant="/home/pi/groundpi.sh 192.168.1.236 > /dev/null 2>&1 &"/>

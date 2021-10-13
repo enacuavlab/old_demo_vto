@@ -14,14 +14,14 @@
   </section>
 
   <section name="BAT">
-    <define name="CRITIC_BAT_LEVEL" value="10.8" unit="V"/>
+    <define name="CRITIC_BAT_LEVEL" value="10.0" unit="V"/>
   </section>
 
   <section name="AUTOPILOT">
     <define name="MODE_STARTUP" value="AP_MODE_NAV"/>
     <define name="MODE_MANUAL" value="AP_MODE_ATTITUDE_DIRECT"/>
-    <define name="MODE_AUTO1" value="AP_MODE_NAV"/>
-    <define name="MODE_AUTO2" value="AP_MODE_GUIDED"/>
+    <define name="MODE_AUTO1" value="AP_MODE_GUIDED"/>
+    <define name="MODE_AUTO2" value="AP_MODE_NAV"/>
     
     <define name="FAILSAFE_DESCENT_SPEED" value="0.5"/>
   </section>

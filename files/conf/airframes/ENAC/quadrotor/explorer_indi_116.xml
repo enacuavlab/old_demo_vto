@@ -27,10 +27,14 @@
     </target>
 
 
-    <module name="telemetry" type="transparent">
-      <configure name="MODEM_BAUD" value="B115200"/>
-      <configure name="MODEM_PORT" value="UART2"/>
+    <module name="telemetry" type="xbee_api"/>
+
+    <!--Tawaki -->
+    <module name="extra_dl">
+      <configure name="EXTRA_DL_PORT" value="UART7"/>
+      <configure name="EXTRA_DL_BAUD" value="B115200"/>
     </module>
+
 
     <module name="actuators" type="dshot">
       <define name="DSHOT_SPEED" value="300"/>
@@ -202,12 +206,12 @@
     <!-- reference acceleration for attitude control -->
     <define name="REF_ERR_P" value="111.0"/>
     <define name="REF_ERR_Q" value="111.0"/>
-    <define name="REF_ERR_R" value="166.0"/>
+    <define name="REF_ERR_R" value="80.0"/>
     <define name="REF_RATE_P" value="14.0"/>
     <define name="REF_RATE_Q" value="14.0"/>
     <define name="REF_RATE_R" value="14.0"/>
 
-    <define name="MAX_R" value="120" unit="deg/s"/>
+    <define name="MAX_R" value="60" unit="deg/s"/>
 
     <!-- second order filter parameters -->
     <define name="FILT_CUTOFF" value="4.0"/>
