@@ -4,18 +4,13 @@
 
   <firmware name="rotorcraft">
 
-    <configure name="PERIODIC_FREQUENCY" value="500"/>
+    <configure name="PERIODIC_FREQUENCY" value="1000"/>
     <configure name="AHRS_PROPAGATE_FREQUENCY" value="$(PERIODIC_FREQUENCY)"/>
   
     <target name="ap" board="tawaki_1.0">
       <module name="radio_control" type="sbus"/>
       <define name="RADIO_KILL_SWITCH" value="RADIO_GAIN1"/>
       <configure name="BARO_PERIODIC_FREQUENCY" value="50"/>
-    </target>
-  
-    <target name="nps" board="pc">
-      <module name="fdm" type="jsbsim"/>
-      <module name="radio_control" type="ppm"/>
     </target>
 
     <module name="telemetry" type="xbee_api"/>
@@ -63,15 +58,14 @@
     <module name="gps" type="datalink"/>
     <configure name="USE_MAGNETOMETER" value="FALSE"/>
 
-    <module name="ins" type="gps_passthrough"/>
-
-    <module name="ahrs" type="float_cmpl_quat">
-      <define name="AHRS_USE_GPS_HEADING"   value="TRUE"/>
-      <define name="AHRS_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/>
+    <module name="ins" type="float_invariant"/>
+    
+    <module name="stabilization" type="indi"/>
+    <module name="guidance" type="indi">
+      <define name="GUIDANCE_INDI_SPECIFIC_FORCE_GAIN" value="-500.0"/>
+      <define name="GUIDANCE_INDI_THRUST_DYNAMICS" value="0.03"/>
+      <define name="GUIDANCE_INDI_RC_DEBUG" value="FALSE"/>
     </module>
-
-    <module name="motor_mixing"/>
-    <module name="stabilization" type="int_quat"/>
 
   </firmware>
 
@@ -80,14 +74,15 @@
   <include href="conf/airframes/ENAC/quadrotor/xp2/xp_imu_$AC_ID.xml"/>
 
   <include href="conf/airframes/ENAC/quadrotor/xp2/xp_stabcom_$AC_ID.xml"/>
-
-  <include href="conf/airframes/ENAC/quadrotor/xp2/xp_stabpid_$AC_ID.xml"/>
+  
+  <include href="conf/airframes/ENAC/quadrotor/xp2/xp_stabindifull_$AC_ID.xml"/>
 
   <include href="conf/airframes/ENAC/quadrotor/xp2/xp_guid_$AC_ID.xml"/>
- 
-  <include href="conf/airframes/ENAC/quadrotor/xp2/xp_cmdmixsim_$AC_ID.xml"/>
 
+  <include href="conf/airframes/ENAC/quadrotor/xp2/xp_cmd.xml"/>
+  
   <include href="conf/airframes/ENAC/quadrotor/xp2/xp_com.xml"/>
-
+  
+  <include href="conf/airframes/ENAC/quadrotor/xp2/xp_insinv_indoor.xml"/>
 
 </airframe>

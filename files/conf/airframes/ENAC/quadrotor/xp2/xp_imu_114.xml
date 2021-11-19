@@ -8,9 +8,9 @@
     <define name="ACCEL_Y_SIGN" value="-1"/>
     <define name="ACCEL_Z_SIGN" value="1"/>
 
-    <define name="ACCEL_X_NEUTRAL" value="29"/>
-    <define name="ACCEL_Y_NEUTRAL" value="53"/>
-    <define name="ACCEL_Z_NEUTRAL" value="-48"/>
+    <define name="ACCEL_X_NEUTRAL" value="27"/>
+    <define name="ACCEL_Y_NEUTRAL" value="63"/>
+    <define name="ACCEL_Z_NEUTRAL" value="-16"/>
     <define name="ACCEL_X_SENS" value="2.364752444671995" integer="16"/>
     <define name="ACCEL_Y_SENS" value="2.4507933708738947" integer="16"/>
     <define name="ACCEL_Z_SENS" value="2.4395534526737275" integer="16"/>
