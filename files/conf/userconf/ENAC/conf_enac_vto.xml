@@ -46,34 +46,34 @@
   <aircraft
    name="Explorer_114"
    ac_id="114"
-   airframe="airframes/ENAC/quadrotor/xp2_floatcmplquat_intquat.xml"
+   airframe="airframes/ENAC/quadrotor/xp2_insinv_intquat.xml"
    radio="radios/FrSky_X-Lite.xml"
    telemetry="telemetry/default_rotorcraft.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_enac_survey.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_float_cmpl_quat.xml modules/e_identification_fr.xml modules/fc_rotor.xml modules/gps.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_int_quat.xml modules/switch_servo.xml"
+   settings_modules="modules/e_identification_fr.xml modules/gps.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_float_invariant.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_int_quat.xml modules/switch_servo.xml"
    gui_color="#08f5e538189a"
   />
   <aircraft
    name="Explorer_115"
    ac_id="115"
-   airframe="airframes/ENAC/quadrotor/xp2_floatcmplquat_fullindi.xml"
+   airframe="airframes/ENAC/quadrotor/xp2_insinv_intquat.xml"
    radio="radios/FrSky_X-Lite.xml"
    telemetry="telemetry/default_rotorcraft.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_enac_survey.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_float_cmpl_quat.xml modules/e_identification_fr.xml modules/fc_rotor.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml modules/switch_servo.xml"
+   settings_modules="modules/e_identification_fr.xml modules/gps.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_float_invariant.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_int_quat.xml modules/switch_servo.xml"
    gui_color="#ace2152e152e"
   />
   <aircraft
    name="Explorer_116"
    ac_id="116"
-   airframe="airframes/ENAC/quadrotor/xp2_floatcmplquat_fullindi.xml"
+   airframe="airframes/ENAC/quadrotor/xp2_insinv_intquat.xml"
    radio="radios/FrSky_X-Lite.xml"
    telemetry="telemetry/default_rotorcraft.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_enac_survey.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_float_cmpl_quat.xml modules/e_identification_fr.xml modules/fc_rotor.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml modules/switch_servo.xml"
+   settings_modules="modules/e_identification_fr.xml modules/gps.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_float_invariant.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_int_quat.xml modules/switch_servo.xml"
    gui_color="#254b92d835b6"
   />
   <aircraft
@@ -106,7 +106,7 @@
    telemetry="telemetry/default_rotorcraft.xml"
    flight_plan="flight_plans/ENAC/rotorcraft_optitrack_Murat.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/fc_rotor.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
+   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml"
    gui_color="blue"
   />
   <aircraft
@@ -114,8 +114,8 @@
    ac_id="118"
    airframe="airframes/ENAC/quadrotor/explorer_2_murat_voliere.xml"
    radio="radios/T10CG_SBUS.xml"
-   telemetry="telemetry/rotorcraft_with_logger.xml"
-   flight_plan="flight_plans/ENAC/rotorcraft_optitrack_Murat.xml"
+   telemetry="telemetry/ENAC/explorer_2telem_vto.xml"
+   flight_plan="flight_plans/ENAC/rotorcraft_optitrack_enac_survey.xml"
    settings="settings/rotorcraft_basic.xml"
    settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/object_tracking.xml modules/stabilization_indi.xml"
    gui_color="#dd0b875d2303"

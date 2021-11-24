@@ -63,17 +63,30 @@
     <module name="gps" type="datalink"/>
     <configure name="USE_MAGNETOMETER" value="FALSE"/>
 
-    <module name="ins" type="gps_passthrough"/>
+    <module name="ins" type="float_invariant"/>
+    <configure name="USE_MAGNETOMETER" value="FALSE"/>
+    <define name="INS_INV_USE_GPS_HEADING" value="TRUE"/>
+    <define name="INS_INV_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/>
+    <define name="SEND_INVARIANT_FILTER" value="TRUE"/>
 
-    <module name="ahrs" type="float_cmpl_quat">
-      <define name="AHRS_USE_GPS_HEADING"   value="TRUE"/>
-      <define name="AHRS_HEADING_UPDATE_GPS_MIN_SPEED" value="0"/>
-    </module>
 
     <module name="motor_mixing"/>
     <module name="stabilization" type="int_quat"/>
 
   </firmware>
+
+<section name="INS_INV" prefix="INS_INV_">
+  <define name="LV" value="1."/>
+  <define name="LB" value="0.4"/>
+  <define name="MV" value="4."/>
+  <define name="NXZ" value="2."/>
+  <define name="MVZ" value="20."/>
+  <define name="RV" value="4."/>
+  <define name="MH" value="0."/>
+  <define name="NH" value="0."/>
+  <define name="RH" value="0."/>
+  <define name="SH" value="0."/>
+</section>
 
   <include href="conf/airframes/ENAC/quadrotor/xp2/xp_actu_$AC_ID.xml"/>
 

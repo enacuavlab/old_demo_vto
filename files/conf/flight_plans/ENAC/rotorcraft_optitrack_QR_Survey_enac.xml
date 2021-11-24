@@ -2,8 +2,8 @@
 
 <flight_plan alt="148" ground_alt="146" lat0="43.5640917" lon0="1.4829201" max_dist_from_home="20" name="Rotorcraft Optitrack (ENAC)" security_height="0.3">
   <header>
-    #include "subsystems/electrical.h"
-    #include "subsystems/datalink/datalink.h"
+    #include "modules/energy/electrical.h"
+    #include "modules/datalink/datalink.h"
   </header>
   <waypoints>
     <waypoint name="HOME" x="0.0" y="0.0"/>
