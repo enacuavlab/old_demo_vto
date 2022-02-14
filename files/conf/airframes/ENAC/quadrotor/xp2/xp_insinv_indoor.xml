@@ -4,6 +4,10 @@
     
   <define name="LV" value="1."/>
   <define name="LB" value="0.4"/>
+  <define name="MV" value="4."/>
+  <define name="NXZ" value="2."/>
+  <define name="MVZ" value="20."/>
+  <define name="RV" value="4."/>
   <define name="MH" value="0."/>
   <define name="NH" value="0."/>
   <define name="RH" value="0."/>
