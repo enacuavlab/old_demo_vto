@@ -21,7 +21,7 @@
 
     <target name="nps" board="pc">
       <module name="fdm" type="jsbsim"/>
-      <module name="radio_control" type="ppm"/>
+      <module name="radio_control" type="datalink"/>
 
       <define name="INDI_RPM_FEEDBACK" value="FALSE"/>
       <define name="CLIMB_VSPEED" value="0.8"/>
