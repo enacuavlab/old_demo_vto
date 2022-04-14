@@ -8,6 +8,7 @@
     <program name="gst-launch-1.0" command="/usr/bin/gst-launch-1.0"/>
     <program name="groundpi" command="/usr/bin/ssh"/>
     <program name="proxy" command="/home/pprz/Projects/compagnon-software/scripts/proxy.py"/>
+    <program name="Data linkpy" command="/home/pprz/Projects/paparazzi/sw/ground_segment/tmtc/link_py.py"/>
   </section>
   <section name="sessions">
     <session name="Swarm Bebop2 212 213">
@@ -599,6 +600,26 @@
       <program name="Link Combiner"/>
       <program name="proxy">
         <arg flag="--mux" constant="4244:4245"/>
+      </program>
+      <program name="gst-launch-1.0">
+        <arg flag="udpsrc" constant="port=5700"/>
+        <arg flag="!" constant="application/x-rtp,"/>
+        <arg flag="encoding-name=H264,payload=96" constant="!"/>
+        <arg flag="rtph264depay" constant="!"/>
+        <arg flag="h264parse" constant="!"/>
+        <arg flag="avdec_h264" constant="!"/>
+        <arg flag="videoconvert" constant="!"/>
+        <arg flag="autovideosink" constant="sync=false"/>
+      </program>
+    </session>
+    <session name="Talon_120_linkpy">
+      <program name="Server"/>
+      <program name="GCS"/>
+      <program name="Data Linkpy">
+        <arg flag="-d" constant="/dev/paparazzi/xbee"/>
+        <arg flag="-t" constant="xbee"/>
+        <arg flag="-s" constant="57600"/>
+        <arg flag="-acs" constant="4244:4245"/>
       </program>
       <program name="gst-launch-1.0">
         <arg flag="udpsrc" constant="port=5700"/>
