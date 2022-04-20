@@ -249,7 +249,7 @@
         <arg flag="-s" constant="57600"/>
         <arg flag="-acs" constant="120:127.0.0.1:4244:4245"/>
       </program>
-      <program name="gst-launch-1.0">
+      <program name="Gstreamer">
         <arg flag="udpsrc" constant="port=5700"/>
         <arg flag="!" constant="application/x-rtp,"/>
         <arg flag="encoding-name=H264,payload=96" constant="!"/>
