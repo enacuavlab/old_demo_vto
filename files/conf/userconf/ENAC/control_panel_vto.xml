@@ -209,6 +209,7 @@
       <program name="groundpi">
         <arg flag="root@groundpi_112" constant="/home/pi/groundpi.sh 192.168.1.236 > /dev/null 2>&1 &"/>
       </program-->
+    </session>
     <session name="Talon_120_linkpy">
       <program name="Server"/>
       <program name="PprzGCS"/>
