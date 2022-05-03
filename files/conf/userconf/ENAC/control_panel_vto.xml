@@ -220,7 +220,6 @@
         <arg flag="-ac" constant="120:127.0.0.1:4244:4245"/>
       </program>
       <program name="ExtendedScreen"/>
-      </program>
     </session>
   </section>
 </control_panel>
