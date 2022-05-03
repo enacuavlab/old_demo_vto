@@ -6,7 +6,7 @@ do
 done
 if [ `wmctrl -l | grep -c "gst-launch-1.0"` -eq 2 ] 
 then
-  x=1280
+  x=1920
   for w in `wmctrl -l | grep "gst-launch-1.0" | awk '{print $1}'`
   do
     echo $w
