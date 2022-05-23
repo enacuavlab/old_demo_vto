@@ -1,6 +1,6 @@
 <!DOCTYPE flight_plan SYSTEM "../flight_plan.dtd">
 
-<flight_plan alt="148" ground_alt="146" lat0="43.5640917" lon0="1.4829201" max_dist_from_home="20" name="Rotorcraft Optitrack (ENAC)" security_height="0.3">
+<flight_plan alt="148" ground_alt="146" lat0="43.5640917" lon0="1.4829201" max_dist_from_home="20" name="Rotorcraft Optitrack (ENAC)" security_height="0.3" wp_frame="ltp">
   <header>
 #include "autopilot.h"
   </header>
@@ -10,10 +10,10 @@
     <waypoint name="TD" x="0.8" y="-1.7"/>
     <waypoint name="CLIMB" x="0.0" y="0.0"/>
 
-    <waypoint name="S1" x="2.1" y="2.8"/>
+    <waypoint name="S1" x="2.0" y="3"/>
     <waypoint name="S2" x="2.0" y="-3.0"/>
-    <waypoint name="S3" x="-2.1" y="-3.1"/>
-    <waypoint name="S4" x="-2.2" y="2.8"/>
+    <waypoint name="S3" x="-2.0" y="-3.0"/>
+    <waypoint name="S4" x="-2.0" y="3.0"/>
 
     <waypoint name="_N1" x="4.5" y="5.2"/>
     <waypoint name="_N2" x="4.5" y="-5.2"/>
