@@ -150,6 +150,7 @@
 
     <define name="ROLL_MAX_SETPOINT" value="40" unit="deg"/>
     <define name="ROLL_ATTITUDE_GAIN" value="11770"/>
+    <define name="ROLL_RATE_GAIN" value="500"/>
   </section>
 
   <section name="FAILSAFE" prefix="FAILSAFE_">
