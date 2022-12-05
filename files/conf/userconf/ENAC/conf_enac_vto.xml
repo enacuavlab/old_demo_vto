@@ -5,9 +5,9 @@
    airframe="airframes/ENAC/quadrotor/anton_indi_aruco.xml"
    radio="radios/FrSky_X-Lite.xml"
    telemetry="telemetry/default_rotorcraft.xml"
-   flight_plan="flight_plans/ENAC/rotorcraft_survey_aruco_enac.xml"
+   flight_plan="flight_plans/ENAC/demo_JPO_drop.xml"
    settings="settings/rotorcraft_basic.xml"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/stabilization_indi.xml modules/switch_servo.xml"
+   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/filter_1euro_imu.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/jevois.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml modules/switch_servo.xml modules/tag_tracking.xml"
    gui_color="#e0265dc85dc8"
   />
   <aircraft
@@ -156,12 +156,12 @@
   <aircraft
    name="Ulysse_218"
    ac_id="218"
-   airframe="airframes/ENAC/quadrotor/niquad_wind.xml"
+   airframe="airframes/ENAC/quadrotor/ulysse_indi_optitrack.xml"
    radio="radios/FrSky_X-Lite.xml"
    telemetry="telemetry/default_rotorcraft.xml"
-   flight_plan="flight_plans/ENAC/rotorcraft_survey_target_enac.xml"
+   flight_plan="flight_plans/ENAC/demo_JPO_drop.xml"
    settings="settings/rotorcraft_basic.xml"
-   gui_color="blue"
-   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/gps.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_int_quat.xml modules/wind_estimation_quadrotor.xml"
+   settings_modules="modules/ahrs_int_cmpl_quat.xml modules/air_data.xml modules/gps.xml modules/guidance_indi.xml modules/guidance_rotorcraft.xml modules/imu_common.xml modules/ins_extended.xml modules/jevois.xml modules/nav_basic_rotorcraft.xml modules/nav_survey_rectangle_rotorcraft.xml modules/stabilization_indi.xml modules/switch_servo.xml modules/tag_tracking.xml"
+   gui_color="#40ace6dbc2dd"
   />
 </conf>

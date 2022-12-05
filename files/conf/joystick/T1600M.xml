@@ -25,7 +25,7 @@
     <set var="mode" value="2" on_event="top_right"/>
   </variables>
 
-  <messages period="0.01">
+  <messages period="0.2">
 
     <message class="datalink" name="RC_4CH" send_always="true">
       <field name="mode"        value="mode"/>
